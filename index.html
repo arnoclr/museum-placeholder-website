@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Art Museum of Sargely</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Gideon Roman', serif;
+        }
+
+        body,
+        nav {
+            background-color: rgb(195, 247, 115);
+        }
+
+        .material-symbols-sharp {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 100,
+                'GRAD' 0,
+                'opsz' 96
+        }
+
+        .hl {
+            display: none;
+        }
+
+        h1 {
+            padding: 0 16px;
+            margin-top: 56px;
+            margin-bottom: 12px;
+            font-size: 5rem;
+        }
+
+        nav {
+            padding: 6px 16px;
+            font-size: 20px;
+            text-transform: uppercase;
+            border-bottom: 1px solid green;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        a {
+            color: green;
+        }
+
+        h2 {
+            margin-top: 0;
+            text-transform: uppercase;
+            font-size: 2rem;
+            letter-spacing: -1px;
+            font-style: italic;
+        }
+
+        article:first-child {
+            grid-area: abstract;
+            border-right: 1px solid green;
+        }
+
+        article:nth-child(2) {
+            grid-area: ethereal;
+        }
+
+        article:nth-child(3) {
+            grid-area: brilliance;
+        }
+
+        main {
+            padding: 0 16px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-areas:
+                "abstract ethereal"
+                "abstract brilliance";
+            gap: 56px;
+        }
+
+        article img {
+            width: 80%;
+            height: auto;
+        }
+
+        time {
+            font-style: italic;
+            color: green;
+        }
+
+        ins {
+            display: inline-block;
+            text-decoration: none;
+            transform: rotate(90deg);
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            max-width: 500px;
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        li .material-symbols-sharp {
+            font-size: 66px;
+        }
+
+        article:first-child img {
+            position: relative;
+            z-index: -1;
+            opacity: 0.7;
+            width: 100%;
+            max-height: 350px;
+            scale: 1.1;
+            object-fit: cover;
+            border-bottom-right-radius: 22px;
+        }
+
+        @media (max-width: 700px) {
+            .hs {
+                display: none;
+            }
+
+            .hl {
+                display: unset;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            h1 {
+                margin-top: 32px;
+                font-size: .8rem;
+                color: white;
+            }
+
+            main {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "abstract"
+                    "ethereal"
+                    "brilliance";
+            }
+
+            article:first-child {
+                border-right: none;
+            }
+
+            article:first-child time {
+                color: black;
+            }
+
+            li .material-symbols-sharp {
+                font-size: 42px;
+            }
+
+            article:first-child img {
+                scale: 1.9;
+            }
+        }
+
+        footer {
+            padding: 20vh 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div>
+            <ins>|||</ins>
+            <span class="hs">Modern Art Museum of Sargely</span>
+            <span class="hl">MAMOS</span>
+        </div>
+        <div>
+            <a href="index.php">Home</a>
+            <a href="index.php">Book a ticket</a>
+        </div>
+    </nav>
+
+    <h1>Actual exhibitions at MAMOS</h1>
+
+    <main>
+        <article>
+            <img src="jens-aber-W82oKZdv8wA-unsplash.jpg" alt="">
+            <br>
+            <time>Fri - Sun</time>
+            <h2>Abstract Renaissance</h2>
+            <p>Explore abstraction through the centuries. This exhibition celebrated the boldness of artists who
+                redefined art standards with their abstract and innovative works.</p>
+            <ul>
+                <li>
+                    <span class="material-symbols-sharp">
+                        schedule
+                    </span>
+                    <p>2 hours</p>
+                </li>
+                <li>
+                    <span class="material-symbols-sharp">
+                        confirmation_number
+                    </span>
+                    <p>$12 (Free for childs<br> and students)</p>
+                </li>
+                <li>
+                    <span class="material-symbols-sharp">
+                        person
+                    </span>
+                    <p>Gabino Verdini</p>
+                </li>
+            </ul>
+        </article>
+
+        <article>
+            <img src="jr-korpa-tBA_u2bUMfg-unsplash.jpg" alt="">
+            <h2>Ethereal Dreams</h2>
+            <p>Discover dreams and fantasies through the eyes of artists. This ephemeral exhibition took you on a
+                dreamlike journey through enchanting artworks.</p>
+            <time>1 Oct. - 12 Dec.</time>
+        </article>
+
+        <article>
+            <img src="anugrah-j-pRPF7pFBRKo-unsplash.jpg" alt="">
+            <h2>The Brilliance of Reality</h2>
+            <p>Immerse yourself in a world where reality intertwines with imagination. The exhibition "The Brilliance of
+                Reality" showcases dazzling artworks by contemporary artists who push the boundaries of perception.
+                Explore paintings, sculptures, and installations that will transport you beyond the ordinary.</p>
+            <time>Opening soon</time>
+        </article>
+    </main>
+
+    <footer>
+        This is a placeholder website. All informations are fictional and photos comes from Unsplash.
+    </footer>
+</body>
+
+</html>
